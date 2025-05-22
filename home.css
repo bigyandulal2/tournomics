@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ancizar Sans", sans-serif;
+}
+:root {
+  --primary-font: 3rem;
+  --secondary-font: 2rem;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  background-color: #f5f8fc;
+  padding-inline: min(30px, 4vw);
+  padding-block: 3rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+
+  z-index: 1;
+}
+header > h1 {
+  color: red;
+  cursor: pointer;
+  font-size: var(--primary-font);
+}
+.item-list {
+  flex: 1;
+  display: flex;
+  /* gap: 3rem; */
+  align-items: center;
+  list-style: none;
+  font-size: var(--secondary-font);
+  font-weight: 600;
+  justify-content: center;
+  gap: 9vw;
+}
+.item-list > li {
+  cursor: pointer;
+}
+.item-list > li:hover {
+  box-shadow: 0px 2px red;
+}
+.item-list > li:nth-child(5):hover {
+  box-shadow: none;
+}
+.item-list > li:nth-child(5) {
+  position: relative;
+}
+.more {
+  position: absolute;
+  list-style: none;
+  background-color: whitesmoke;
+  padding-block: 1rem;
+  transform: scaleY(0);
+}
+.item-list > li:nth-child(5):hover .more {
+  transform: scaleY(1);
+}
+.more > li {
+  transition: all 0.3s ease-in-out;
+  padding: 1rem;
+  padding-inline: 2rem;
+  width: 10vw;
+}
+
+.more > li:hover {
+  color: white;
+  background-color: red;
+  opacity: 0.6;
+  cursor: pointer;
+  /* z-index: 10; */
+}
+.more-item3 {
+  position: relative;
+}
+.more-item3-ul {
+  position: absolute;
+  list-style: none;
+  top: 0;
+  left: -100px;
+  width: 10vw;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  padding: 1rem;
+  background-color: whitesmoke;
+}
+.more-item3:hover .more-item3-ul {
+  transform: scaleY(1);
+  color: black;
+}
+.more-item3-ul > li {
+  cursor: pointer;
+  padding-block: 1rem;
+  text-align: center;
+}
+.more-item3-ul > li:hover {
+  background-color: red;
+  color: white;
+}
+/* section img starts */
+main {
+  position: relative;
+}
+.img-section {
+  background: url(https://cdn.pixabay.com/photo/2025/05/07/18/46/lake-9585821_1280.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* filter: brightness(1) blur(10px); */
+  height: 100vh;
+  position: relative;
+}
+.img-section-heading {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  top: 40%;
+  left: 40%;
+  opacity: 0.5;
+  width: 50vw;
+  padding-block: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  line-height: 1.6;
+}
+.img-section-heading > h1 {
+  font-size: calc(var(--primary-font) * 1.4);
+  color: #ff0000;
+}
+.img-section-heading > p {
+  font-size: calc(var(--secondary-font) * 1.4);
+  color: black;
+  font-weight: 500;
+}
+.img-section-p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* services-section  */
+.services-section {
+  height: 100vh;
+  padding-top: 3rem;
+}
+.services-section > h3 {
+  font-size: var(--primary-font);
+  color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+.services-images-container {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "img1 img2 img3"
+    "img1 img2 img5"
+    "img6 img4 img7"
+    "img6 img4 img8";
+  gap: 1rem;
+  padding-inline: 1rem;
+}
+.services-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: scroll; */
+}
+.services-img:hover {
+  transform: translate(0, 6px);
+}
+.services-img.img1 {
+  background-image: url(https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  grid-area: img1;
+}
+.services-img.img2 {
+  background-image: url(https://images.pexels.com/photos/2161449/pexels-photo-2161449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  grid-area: img2;
+}
+.services-img.img3 {
+  background-image: url(https://images.pexels.com/photos/2108832/pexels-photo-2108832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  grid-area: img3;
+}
+.services-img.img4 {
+  background-image: url(https://images.pexels.com/photos/158398/niagara-falls-waterfall-horseshoe-158398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  grid-area: img4;
+}
+.services-img.img5 {
+  background-image: url(https://images.pexels.com/photos/2147993/pexels-photo-2147993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  grid-area: img5;
+}
+.services-img.img6 {
+  background-image: url(https://images.pexels.com/photos/32176771/pexels-photo-32176771/free-photo-of-red-boat-with-passengers-sailing-on-ocean.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  grid-area: img6;
+  background-position: 0% 68%;
+}
+.services-img.img7 {
+  background-image: url(https://images.pexels.com/photos/15670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  grid-area: img7;
+  background-position: 0% -4%;
+}
+.services-img.img8 {
+  background-image: url(https://images.pexels.com/photos/32098781/pexels-photo-32098781/free-photo-of-stunning-rock-formations-in-cappadocia.jpeg?auto=compress&cs=tinysrgb&w=600);
+  grid-area: img8;
+}
+/* aboutus-section starts */
+.aboutus-section {
+  /* height: 100vh; */
+  background-color: whitesmoke;
+  margin-top: 2rem;
+  padding: 2rem;
+  letter-spacing: 1.7;
+}
+.aboutus-section-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+}
+.aboutus-section-content > h3 {
+  font-size: var(--primary-font);
+  color: red;
+  opacity: 0.6;
+}
+.aboutus-section-content > p {
+  font-size: var(--secondary-font);
+  color: #0f52ba;
+  line-height: 1.6;
+}
+h2 {
+  font-size: var(--primary-font);
+  color: red;
+  opacity: 0.6;
+}
+.tournomics-why-list,
+.tournomics-values-list {
+  color: #0f52ba;
+  font-size: var(--secondary-font);
+  padding: 2rem;
+  padding-left: 3rem;
+}
+.aboutus-section-content > h4 {
+  font-size: var(--primary-font);
+  color: red;
+  opacity: 0.6;
+}
+/* section-testimonials */
+.section-testimonials {
+  height: 50vh;
+  width: 100%;
+  background-image: url(https://images.pexels.com/photos/32109973/pexels-photo-32109973/free-photo-of-scenic-geothermal-landscape-in-iceland.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap-reverse;
+}
+.testimonials {
+  width: 400px;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  padding: 1.9rem;
+  gap: 1rem;
+  transition: all 0.9s ease-in-out;
+}
+
+.testimonials > img {
+  border-radius: 50%;
+}
+.testimonial-content > p {
+  font-size: 2rem;
+  color: #0f52ba;
+  font-weight: 600;
+}
+.testimonial-content > h6 {
+  font-size: 1.7rem;
+  color: red;
+}
+.testimonial > img {
+  border-radius: 50%;
+}
+.testimonials-1 {
+  position: absolute;
+  top: 4rem;
+  left: 6rem;
+}
+.testimonials:hover {
+  cursor: pointer;
+  transform: translateX(10px) scale(1.1);
+}
+.testimonials-2 {
+  position: absolute;
+  top: 4rem;
+  right: 6rem;
+}
+/* section-careers starts */
+.section-career > h3 {
+  font-size: var(--primary-font);
+  color: red;
+  text-align: center;
+  padding: 2rem 0;
+  opacity: 0.8;
+}
+.section-career-img {
+  background: url(https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-career-img > form {
+  width: min(500px, 100%);
+  height: min(600px, 100%);
+  background-color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  opacity: 0.7;
+  gap: 2rem;
+}
+.section-career-img > form > h3 {
+  font-size: var(--primary-font);
+  color: red;
+}
+.section-career-img > form > input {
+  padding: 1rem;
+  outline: none;
+  color: red;
+  font-size: var(--secondary-font);
+}
+.section-career-comment {
+  font-size: var(--secondary-font);
+  color: red;
+}
+.section-career-comment > label {
+  display: block;
+  padding-bottom: 1rem;
+}
+.section-career-comment > textarea {
+  width: 100%;
+  height: 100px;
+  outline: none;
+  font-style: 2rem;
+  color: red;
+}
+.section-career-img > form > p > button {
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+  background-color: #0f52ba;
+  border: 1px solid #0f52ba;
+  border-radius: 4px;
+  opacity: 0.8;
+}
+.section-career-img > form > p > button:hover {
+  opacity: 1;
+  transform: scale(1.1) translateX(12px);
+  cursor: pointer;
+}
+/* section-contact starts */
+.section-contact > h3 {
+  font-size: var(--primary-font);
+  color: red;
+  opacity: 0.8;
+  text-align: center;
+  margin: 2rem;
+}
+/* footer section starts */
