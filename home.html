@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="home.css" />
   </head>
   <body>
@@ -46,12 +47,17 @@
           </ul>
         </li>
       </ul>
+      <div class="show"><i class="fa-solid fa-bars"></i></div>
     </header>
 
     <main>
       <!-- img section starts -->
       <section class="img-section" id="home">
-        <div class="img-section-heading">
+        <div
+          class="img-section-heading"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        >
           <h1>Tournomics</h1>
           <p class="img-section-p">let your plans, come to life</p>
           <p>
@@ -64,14 +70,26 @@
       <section class="services-section">
         <h3>Here are some the various places that you can trip for</h3>
         <div class="services-images-container">
-          <div class="services-img img1"></div>
-          <div class="services-img img2"></div>
-          <div class="services-img img3"></div>
-          <div class="services-img img4"></div>
-          <div class="services-img img5"></div>
-          <div class="services-img img6"></div>
-          <div class="services-img img7"></div>
-          <div class="services-img img8"></div>
+          <div
+            class="services-img img1"
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+          ></div>
+          <div class="services-img img2" data-aos="zoom-in"></div>
+          <div class="services-img img3" data-aos="zoom-in"></div>
+          <div class="services-img img4" data-aos="zoom-in"></div>
+          <div class="services-img img5" data-aos="zoom-in"></div>
+          <div class="services-img img6" data-aos="zoom-out"></div>
+          <div
+            class="services-img img7"
+            data-aos="zoom-out"
+            data-aos-duration="2000"
+          ></div>
+          <div
+            class="services-img img8"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          ></div>
         </div>
       </section>
       <!-- about us section -->
@@ -177,7 +195,11 @@
       </section>
       <!-- section-testimonial starts -->
       <section class="section-testimonials" id="testimonials">
-        <div class="testimonials testimonials-1">
+        <div
+          class="testimonials testimonials-1"
+          data-aos="flip-left"
+          data-aos-duration="2000"
+        >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/The_Prime_Minister_of_Nepal%2C_Shri_KP_Sharma_Oli_at_Bangkok%2C_in_Thailand_on_April_04%2C_2025_%28cropped%29.jpg/500px-The_Prime_Minister_of_Nepal%2C_Shri_KP_Sharma_Oli_at_Bangkok%2C_in_Thailand_on_April_04%2C_2025_%28cropped%29.jpg"
             alt="binod-sir"
@@ -193,7 +215,11 @@
           </div>
         </div>
         <!-- testimonials-2 -->
-        <div class="testimonials testimonials-2">
+        <div
+          class="testimonials testimonials-2"
+          data-aos="flip-left"
+          data-aos-duration="3000"
+        >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Prime_Minister_of_Nepal_Pushpa_Kamal_Dahal_%22Prachanda%22.jpg/500px-Prime_Minister_of_Nepal_Pushpa_Kamal_Dahal_%22Prachanda%22.jpg"
             alt="binod-sir"
@@ -209,7 +235,11 @@
           </div>
         </div>
         <!-- testimonial-3 -->
-        <div class="testimonials testimonials-3">
+        <div
+          class="testimonials testimonials-3"
+          data-aos="flip-left"
+          data-aos-duration="4000"
+        >
           <img
             src="https://imgs.search.brave.com/1L-7f0lHq0rykPwH0_eS2gP5BCX2DP5lbeECeFq-MaI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcx/NTAyMDAwMS9waG90/by90b3BzaG90LXRo/aXMtcGhvdG8tZGF0/ZWQtMDItb2N0b2Jl/ci0yMDAyLXNob3dz/LW5lcGFsZXNlLXBy/aW1lLW1pbmlzdGVy/LXNoZXItYmFoYWR1/ci1kZXViYS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9MV9V/X09QTFQwQ1lrQUE2/MmdkUmRWdTU1RFFl/dngwV1dWYlgxZDIy/djdPMD0"
             alt="binod-sir"
@@ -230,7 +260,7 @@
       <section class="section-career">
         <h3>You give life to Our paradigm!</h3>
         <div class="section-career-img">
-          <form action="#">
+          <form action="#" data-aos="slide-right">
             <h3>Drop Your Feedback and Career request</h3>
             <input type="email" placeholder="enter gmail" />
 
@@ -253,22 +283,42 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
+          data-aos="zoom-in"
         ></iframe>
-        <!-- contactus -->
-        <div class="contact">
-          <form action="#">
-            <h3>Contact To our platform</h3>
-            <input type="email" placeholder="enter gmail" />
-
-            <p class="section-career-comment">
-              <label for="textarea">Your Comment</label>
-              <textarea id="textarea"></textarea>
-            </p>
-            <p><button>Submit</button></p>
-          </form>
-        </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer-container">
+        <ul class="contact-details">
+          <li><strong>Contact information</strong></li>
+          <li>email:support@tournomics.com</li>
+          <li>phone:+977 9825335201</li>
+          <li>location:Damak-9,jhapa</li>
+        </ul>
+
+        <ul class="social-media-icons">
+          <h4 style="color: red">follow us on</h4>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-square-x-twitter"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+          <li><i class="fa-brands fa-linkedin"></i></li>
+        </ul>
+        <ul class="legal-links">
+          <li>privacy policy</li>
+          <li>Terms of Service</li>
+          <li>Cookie Policy</li>
+        </ul>
+      </div>
+      <marquee>© 2025 Tournomics. All rights reserved.</marquee>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      console.log("hello world");
+      AOS.init({
+        once: true,
+      });
+      1;
+    </script>
   </body>
 </html>
