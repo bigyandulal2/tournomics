@@ -572,7 +572,8 @@ h2 {
   .aboutus-section-content {
     padding-inline: 10px;
   }
-  .social-media-icons > li > i {
+
+  .fa-brands {
     font-size: 20px;
   }
 }
