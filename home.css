@@ -518,6 +518,9 @@ h2 {
   header {
     justify-content: space-between;
   }
+  .img-section {
+    height: 60vh;
+  }
   .item-list {
     display: none;
   }
@@ -527,13 +530,16 @@ h2 {
   }
   .img-section-heading {
     position: relative;
-    display: flex;
-    justify-content: center;
     min-width: 100%;
     left: 0;
-    height: 50vh;
+    top: 40%;
     border-radius: 0;
-    /* top: 0; */
+  }
+  .section-career-img > form {
+    opacity: 0.9;
+  }
+  .section-career-img {
+    height: 50vh;
   }
   .img-section-heading > h1 {
     font-size: 30px;
