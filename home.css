@@ -517,6 +517,7 @@ h2 {
 @media screen and (max-width: 527px) {
   header {
     justify-content: space-between;
+    /* padding-right: 1rem; */
   }
   .img-section {
     height: 60vh;
@@ -571,8 +572,9 @@ h2 {
   .aboutus-section-content {
     padding-inline: 10px;
   }
-  .section-testimonials {
-    /* display: block; */
+  .social-media-icons > li {
+    height: 20px;
+    width: 20px;
   }
 }
 @media screen and(max-width:450px) {
