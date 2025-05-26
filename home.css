@@ -413,7 +413,7 @@ h2 {
 }
 .footer-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding-bottom: 4rem;
 }
 .contact-details {
