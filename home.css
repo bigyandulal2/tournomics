@@ -6,12 +6,15 @@
   font-family: "Ancizar Sans", sans-serif;
 }
 :root {
-  --primary-font: 3rem;
-  --secondary-font: 2rem;
+  --primary-font: 3.4rem;
+  --secondary-font: 2.2rem;
 }
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -182,6 +185,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
   /* background-attachment: scroll; */
 }
 .services-img:hover {
@@ -400,3 +404,241 @@ h2 {
   margin: 2rem;
 }
 /* footer section starts */
+.footer {
+  background-color: whitesmoke;
+  padding: 2rem 0 0 0;
+  margin: 2rem 0 0 0;
+  font-size: var(--secondary-font);
+  position: relative;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4rem;
+}
+.contact-details {
+  list-style: none;
+}
+.contact-details > li > strong {
+  font-size: 2.4rem;
+  color: red;
+  opacity: 0.7;
+}
+.contact-details > li {
+  color: #0f52ba;
+}
+.footer > marquee {
+  background-color: #0f52ba;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+.social-media-icons {
+  list-style: none;
+  display: flex;
+  gap: min(10px, 6vw);
+  align-items: center;
+}
+.fa-brands {
+  cursor: pointer;
+}
+.fa-brands:hover {
+  transform: scale(1.1);
+}
+.fa-facebook {
+  color: #0f52ba;
+}
+.fa-instagram {
+  color: white;
+  background-color: #d62976;
+}
+.fa-linkedin {
+  color: blue;
+}
+.fa-youtube {
+  color: red;
+}
+.legal-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #0f52ba;
+  list-style: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+.legal-links > li:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px red;
+}
+.show {
+  display: none;
+  margin-right: 20px;
+}
+#cross {
+  display: none;
+}
+.visible_nav {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 90vw;
+  opacity: 0.6;
+  /* gap: 10px; */
+  right: 0;
+  top: 0;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: start;
+  padding-top: 200px;
+}
+/* hamburger cross */
+.cross {
+  position: absolute;
+  right: 40px;
+  top: 100px;
+  font-size: 5rem;
+  width: 30px;
+  color: white;
+}
+
+/* media query starts here */
+@media screen and (max-width: 1040px) {
+  .testimonials-1 {
+    position: static;
+  }
+  .testimonials-2 {
+    position: static;
+  }
+  .testimonials-3 {
+    position: static;
+  }
+  .testimonials {
+    padding: 10px;
+  }
+  .section-testimonials {
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 824px) {
+  html {
+    font-size: 8px;
+  }
+  .item-list {
+    gap: max(15px, 3vw);
+  }
+  .img-section-heading > h1 {
+    font-size: 20px;
+  }
+  .img-section-heading > p {
+    font-size: 14px;
+  }
+  .services-section > h3 {
+    font-size: 20px;
+  }
+  .section-career-comment > label {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 527px) {
+  header {
+    justify-content: space-between;
+    /* padding-right: 1rem; */
+  }
+  .img-section {
+    height: 60vh;
+  }
+  .item-list {
+    display: none;
+  }
+  .show {
+    display: block;
+    font-size: 3rem;
+  }
+  .item-list > li > a,
+  .item-list > li {
+    font-size: 4rem;
+    color: white !important;
+  }
+  .more {
+    background-color: black;
+    opacity: 1;
+  }
+  .more > li {
+    font-size: 4rem;
+    width: 135px;
+    color: white;
+  }
+  .more > li:hover {
+    opacity: 1;
+  }
+  .more-item3-ul > li {
+    font-size: 4rem;
+    color: white;
+  }
+  .more-item3-ul {
+    width: 135px;
+    background-color: black;
+    left: -140px;
+    opacity: 1;
+  }
+  .more-item3-ul > li {
+    opacity: 1;
+  }
+  .img-section-heading {
+    position: relative;
+    min-width: 100%;
+    left: 0;
+    top: 40%;
+    border-radius: 0;
+  }
+  .section-career-img > form {
+    opacity: 0.9;
+  }
+  .section-career-img {
+    height: 50vh;
+  }
+  .img-section-heading > h1 {
+    font-size: 30px;
+  }
+  .img-section-heading > p {
+    font-size: 20px;
+  }
+  .services-images-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img1 img2"
+      "img3 img4"
+      "img5 img6"
+      "img7  img8";
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .section-career {
+    font-size: 20px;
+  }
+  .aboutus-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .aboutus-section-content {
+    padding-inline: 10px;
+  }
+
+  .fa-brands {
+    font-size: 20px;
+  }
+}
+@media screen and(max-width:450px) {
+  .section-testimonials {
+    width: 100%;
+  }
+}
